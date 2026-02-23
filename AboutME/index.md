@@ -9,10 +9,11 @@
         <li>Email: <a href="mailto:xuzhang480@gmail.com">xuzhang480@gmail.com</a></li>
     </td>
     <td width="25%">
-      <img src="photo.jpg" width="100%">
+      <img src="photo3.jpeg" width="100%">
     </td>
   </tr>
 </table>
+
 
 
 ------

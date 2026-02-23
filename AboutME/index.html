@@ -1,615 +1,417 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-  <title>About Me</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xu Zhang | PhD Student</title>
+  <meta name="description" content="Xu Zhang — PhD student in Computer Engineering at Illinois Institute of Technology. Research in robust ML, mixture of experts, and semantic communication." />
+  <meta name="author" content="Xu Zhang" />
 
+  <!-- Optional: Font Awesome (icons) -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
-.mac-os-11 { --title-bar-height: 28px; }
-html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-h1, h2, h3, h4, h5 { white-space: pre-wrap; }
-body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit; background-repeat: inherit; }
-iframe { margin: auto; }
-a.url { word-break: break-all; }
-a:active, a:hover { outline: 0px; }
-.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
-#write.first-line-indent p { text-indent: 2em; }
-#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
-#write.first-line-indent li { margin-left: 2em; }
-.for-image #write { padding-left: 8px; padding-right: 8px; }
-body.typora-export { padding-left: 30px; padding-right: 30px; }
-.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
-.typora-export .task-list-item input { pointer-events: none; }
-@media screen and (max-width: 500px) {
-  body.typora-export { padding-left: 0px; padding-right: 0px; }
-  #write { padding-left: 20px; padding-right: 20px; }
-}
-#write li > figure:last-child { margin-bottom: 0.5rem; }
-#write ol, #write ul { position: relative; }
-img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
-button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
-input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
-*, ::after, ::before { box-sizing: border-box; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
-p { line-height: inherit; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
-p { orphans: 4; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.8rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.4rem; }
-h5 { font-size: 1.2rem; }
-h6 { font-size: 1rem; }
-.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
-.hidden { display: none; }
-.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
-a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
-sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
-#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
-figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
-figure > table { margin: 0px; }
-thead, tr { break-inside: avoid; break-after: auto; }
-thead { display: table-header-group; }
-table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
-table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
-.CodeMirror-linenumber { -webkit-user-select: none; }
-.CodeMirror { text-align: left; }
-.CodeMirror-placeholder { opacity: 0.3; }
-.CodeMirror pre { padding: 0px 4px; }
-.CodeMirror-lines { padding: 0px; }
-div.hr:focus { cursor: none; }
-#write pre { white-space: pre-wrap; }
-#write.fences-no-line-wrapping pre { white-space: pre; }
-#write pre.ty-contain-cm { white-space: normal; }
-.CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
-.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
-#write .md-fences.mock-cm { white-space: pre-wrap; }
-.md-fences.md-fences-with-lineno { padding-left: 0px; }
-#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
-.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
-.CodeMirror-line, twitterwidget { break-inside: avoid; }
-svg { break-inside: avoid; }
-.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
-.footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
-li div { padding-top: 0px; }
-blockquote { margin: 1rem 0px; }
-li .mathjax-block, li p { margin: 0.5rem 0px; }
-li blockquote { margin: 1rem 0px; }
-li { margin: 0px; position: relative; }
-blockquote > :last-child { margin-bottom: 0px; }
-blockquote > :first-child, li > :first-child { margin-top: 0px; }
-.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
-#write .footnote-line { white-space: pre-wrap; }
-@media print {
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
-  .typora-export * { print-color-adjust: exact; }
-  .typora-export #write { break-after: avoid; }
-  .typora-export #write::after { height: 0px; }
-  .is-mac table { break-inside: avoid; }
-  #write > p:nth-child(1) { margin-top: 0px; }
-  .typora-export-show-outline .typora-export-sidebar { display: none; }
-  figure { overflow-x: visible; }
-}
-.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
-a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
-p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
-#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
-p > .md-image:only-child { display: inline-block; width: 100%; }
-#write .MathJax_Display { margin: 0.8em 0px 0px; }
-.md-math-block { width: 100%; }
-.md-math-block:not(:empty)::after { display: none; }
-.MathJax_ref { fill: currentcolor; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
-.md-task-list-item { position: relative; list-style-type: none; }
-.task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
-.math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
-.md-toc-content { position: relative; margin-left: 0px; }
-.md-toc-content::after, .md-toc::after { display: none; }
-.md-toc-item { display: block; color: rgb(65, 131, 196); }
-.md-toc-item a { text-decoration: none; }
-.md-toc-inner:hover { text-decoration: underline; }
-.md-toc-inner { display: inline-block; cursor: pointer; }
-.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
-.md-toc-h2 .md-toc-inner { margin-left: 2em; }
-.md-toc-h3 .md-toc-inner { margin-left: 4em; }
-.md-toc-h4 .md-toc-inner { margin-left: 6em; }
-.md-toc-h5 .md-toc-inner { margin-left: 8em; }
-.md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) {
-  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
-  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
-  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
-  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
-}
-a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
-.footnote-line a:not(.reversefootnote) { color: inherit; }
-.reversefootnote { font-family: ui-monospace, sans-serif; }
-.md-attr { display: none; }
-.md-fn-count::after { content: "."; }
-code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
-code { text-align: left; }
-a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
-.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
-.md-diagram-panel > svg { max-width: 100%; }
-[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
-[lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom-width: 0px; }
-video { max-width: 100%; display: block; margin: 0px auto; }
-iframe { max-width: 100%; width: 100%; border: none; }
-.highlight td, .highlight tr { border: 0px; }
-mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
-.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
-.md-expand mark .md-meta { opacity: 0.3 !important; }
-mark .md-meta { color: rgb(0, 0, 0); }
-@media print {
-  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
-}
-.md-diagram-panel .messageText { stroke: none !important; }
-.md-diagram-panel .start-state { fill: var(--node-fill); }
-.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
-.md-fences.md-fences-math { font-size: 1em; }
-.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
-.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
-.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
-.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
-.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
-.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
-@media screen and (max-width: 1024px) {
-  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
-}
-@media screen and (max-width: 800px) {
-  .typora-export-sidebar { display: none; }
-}
-.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
-.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
-.outline-content strong { font-weight: 400; }
-.outline-expander { width: 1rem; height: 1.428571rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
-.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
-.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
-.outline-expander:hover::before { content: ""; }
-.outline-h1 > .outline-item { padding-left: 0px; }
-.outline-h2 > .outline-item { padding-left: 1em; }
-.outline-h3 > .outline-item { padding-left: 2em; }
-.outline-h4 > .outline-item { padding-left: 3em; }
-.outline-h5 > .outline-item { padding-left: 4em; }
-.outline-h6 > .outline-item { padding-left: 5em; }
-.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
-.outline-label:hover { text-decoration: underline; }
-.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
-.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
-.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
-.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
-.outline-children { display: none; }
-.info-panel-tab-wrapper { display: none; }
-.outline-item-open > .outline-children { display: block; }
-.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
-.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
-.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
-.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
-.typora-export-collapse-outline .outline-children { display: none; }
-.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
-.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
-.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
-.md-inline-math-container mjx-container { zoom: 0.95; }
-mjx-container { break-inside: avoid; }
-
-
-:root {
-    --side-bar-bg-color: #fafafa;
-    --control-text-color: #777;
-}
-
-@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
-
-/* open-sans-regular - latin-ext_latin */
-  /* open-sans-italic - latin-ext_latin */
-    /* open-sans-700 - latin-ext_latin */
-    /* open-sans-700italic - latin-ext_latin */
-  html {
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-}
-
-body {
-    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
-    color: rgb(51, 51, 51);
-    line-height: 1.6;
-}
-
-#write {
-    max-width: 860px;
-  	margin: 0 auto;
-  	padding: 30px;
-    padding-bottom: 100px;
-}
-
-@media only screen and (min-width: 1400px) {
-	#write {
-		max-width: 1024px;
-	}
-}
-
-@media only screen and (min-width: 1800px) {
-	#write {
-		max-width: 1200px;
-	}
-}
-
-#write > ul:first-child,
-#write > ol:first-child{
-    margin-top: 30px;
-}
-
-a {
-    color: #4183C4;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    position: relative;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    line-height: 1.4;
-    cursor: text;
-}
-h1:hover a.anchor,
-h2:hover a.anchor,
-h3:hover a.anchor,
-h4:hover a.anchor,
-h5:hover a.anchor,
-h6:hover a.anchor {
-    text-decoration: none;
-}
-h1 tt,
-h1 code {
-    font-size: inherit;
-}
-h2 tt,
-h2 code {
-    font-size: inherit;
-}
-h3 tt,
-h3 code {
-    font-size: inherit;
-}
-h4 tt,
-h4 code {
-    font-size: inherit;
-}
-h5 tt,
-h5 code {
-    font-size: inherit;
-}
-h6 tt,
-h6 code {
-    font-size: inherit;
-}
-h1 {
-    font-size: 2.25em;
-    line-height: 1.2;
-    border-bottom: 1px solid #eee;
-}
-h2 {
-    font-size: 1.75em;
-    line-height: 1.225;
-    border-bottom: 1px solid #eee;
-}
-
-/*@media print {
-    .typora-export h1,
-    .typora-export h2 {
-        border-bottom: none;
-        padding-bottom: initial;
+  <style>
+    :root{
+      --bg: #0b1020;
+      --panel: rgba(255,255,255,0.06);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.70);
+      --soft: rgba(255,255,255,0.14);
+      --link: #9dd6ff;
+      --accent: #8ef0c8;
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+      --radius: 16px;
+      --maxw: 1020px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
     }
-
-    .typora-export h1::after,
-    .typora-export h2::after {
-        content: "";
-        display: block;
-        height: 100px;
-        margin-top: -96px;
-        border-top: 1px solid #eee;
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: var(--sans);
+      color: var(--text);
+      background:
+        radial-gradient(1000px 600px at 20% 10%, rgba(141, 217, 255, 0.25), transparent 60%),
+        radial-gradient(900px 500px at 80% 10%, rgba(142, 240, 200, 0.18), transparent 55%),
+        radial-gradient(900px 700px at 60% 90%, rgba(188, 152, 255, 0.16), transparent 60%),
+        var(--bg);
+      line-height:1.6;
     }
-}*/
-
-h3 {
-    font-size: 1.5em;
-    line-height: 1.43;
-}
-h4 {
-    font-size: 1.25em;
-}
-h5 {
-    font-size: 1em;
-}
-h6 {
-   font-size: 1em;
-    color: #777;
-}
-p,
-blockquote,
-ul,
-ol,
-dl,
-table{
-    margin: 0.8em 0;
-}
-li>ol,
-li>ul {
-    margin: 0 0;
-}
-hr {
-    height: 2px;
-    padding: 0;
-    margin: 16px 0;
-    background-color: #e7e7e7;
-    border: 0 none;
-    overflow: hidden;
-    box-sizing: content-box;
-}
-
-li p.first {
-    display: inline-block;
-}
-ul,
-ol {
-    padding-left: 30px;
-}
-ul:first-child,
-ol:first-child {
-    margin-top: 0;
-}
-ul:last-child,
-ol:last-child {
-    margin-bottom: 0;
-}
-blockquote {
-    border-left: 4px solid #dfe2e5;
-    padding: 0 15px;
-    color: #777777;
-}
-blockquote blockquote {
-    padding-right: 0;
-}
-table {
-    padding: 0;
-    word-break: initial;
-}
-table tr {
-    border: 1px solid #dfe2e5;
-    margin: 0;
-    padding: 0;
-}
-table tr:nth-child(2n),
-thead {
-    background-color: #f8f8f8;
-}
-table th {
-    font-weight: bold;
-    border: 1px solid #dfe2e5;
-    border-bottom: 0;
-    margin: 0;
-    padding: 6px 13px;
-}
-table td {
-    border: 1px solid #dfe2e5;
-    margin: 0;
-    padding: 6px 13px;
-}
-table th:first-child,
-table td:first-child {
-    margin-top: 0;
-}
-table th:last-child,
-table td:last-child {
-    margin-bottom: 0;
-}
-
-.CodeMirror-lines {
-    padding-left: 4px;
-}
-
-.code-tooltip {
-    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
-    border-top: 1px solid #eef2f2;
-}
-
-.md-fences,
-code,
-tt {
-    border: 1px solid #e7eaed;
-    background-color: #f8f8f8;
-    border-radius: 3px;
-    padding: 0;
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
-}
-
-code {
-    background-color: #f3f4f4;
-    padding: 0 2px 0 2px;
-}
-
-.md-fences {
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding-top: 8px;
-    padding-bottom: 6px;
-}
-
-
-.md-task-list-item > input {
-  margin-left: -1.3em;
-}
-
-@media print {
-    html {
-        font-size: 13px;
+    a{color:var(--link); text-decoration:none}
+    a:hover{ text-decoration:underline }
+    .wrap{max-width:var(--maxw); margin:0 auto; padding: 22px 18px 64px;}
+    .nav{
+      position: sticky; top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: rgba(11,16,32,0.55);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
-    pre {
-        page-break-inside: avoid;
-        word-wrap: break-word;
+    .nav-inner{
+      max-width: var(--maxw);
+      margin:0 auto;
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:space-between;
+      padding: 12px 18px;
     }
-}
-
-.md-fences {
-	background-color: #f8f8f8;
-}
-#write pre.md-meta-block {
-	padding: 1rem;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: #f7f7f7;
-    border: 0;
-    border-radius: 3px;
-    color: #777777;
-    margin-top: 0 !important;
-}
-
-.mathjax-block>.code-tooltip {
-	bottom: .375rem;
-}
-
-.md-mathjax-midline {
-    background: #fafafa;
-}
-
-#write>h3.md-focus:before{
-	left: -1.5625rem;
-	top: .375rem;
-}
-#write>h4.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h5.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-#write>h6.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-.md-image>.md-meta {
-    /*border: 1px solid #ddd;*/
-    border-radius: 3px;
-    padding: 2px 0px 0px 4px;
-    font-size: 0.9em;
-    color: inherit;
-}
-
-.md-tag {
-    color: #a7a7a7;
-    opacity: 1;
-}
-
-.md-toc { 
-    margin-top:20px;
-    padding-bottom:20px;
-}
-
-.sidebar-tabs {
-    border-bottom: none;
-}
-
-#typora-quick-open {
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
-}
-
-#typora-quick-open-item {
-    background-color: #FAFAFA;
-    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
-    border-style: solid;
-    border-width: 1px;
-}
-
-/** focus mode */
-.on-focus-mode blockquote {
-    border-left-color: rgba(85, 85, 85, 0.12);
-}
-
-header, .context-menu, .megamenu-content, footer{
-    font-family: "Segoe UI", "Arial", sans-serif;
-}
-
-.file-node-content:hover .file-node-icon,
-.file-node-content:hover .file-node-open-state{
-    visibility: visible;
-}
-
-.mac-seamless-mode #typora-sidebar {
-    background-color: #fafafa;
-    background-color: var(--side-bar-bg-color);
-}
-
-.md-lang {
-    color: #b4654d;
-}
-
-/*.html-for-mac {
-    --item-hover-bg-color: #E6F0FE;
-}*/
-
-#md-notification .btn {
-    border: 0;
-}
-
-.dropdown-menu .divider {
-    border-color: #e5e5e5;
-    opacity: 0.4;
-}
-
-.ty-preferences .window-content {
-    background-color: #fafafa;
-}
-
-.ty-preferences .nav-group-item.active {
-    color: white;
-    background: #999;
-}
-
-.menu-item-container a.menu-style-btn {
-    background-color: #f5f8fa;
-    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
-}
-
-
- @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
-</style><title>index</title>
+    .brand{
+      display:flex; gap:10px; align-items:center;
+      font-weight:700;
+      letter-spacing:0.2px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background: linear-gradient(135deg, var(--accent), var(--link));
+      box-shadow: 0 0 0 4px rgba(158, 230, 255, 0.12);
+    }
+    .nav-links{
+      display:flex; flex-wrap:wrap;
+      gap: 10px 14px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .nav-links a{color:var(--muted)}
+    .nav-links a:hover{color:var(--text); text-decoration:none}
+    .hero{
+      margin-top: 22px;
+      display:grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+    @media (max-width: 860px){
+      .hero{grid-template-columns: 1fr}
+    }
+    .card{
+      background: var(--panel);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .hero-main{padding: 22px 22px 18px;}
+    .kicker{
+      font-family: var(--mono);
+      font-size: 12px;
+      color: rgba(255,255,255,0.70);
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+    }
+    h1{margin: 10px 0 8px; font-size: 34px; line-height:1.15}
+    .subtitle{color: var(--muted); margin: 0 0 14px; font-size: 16px}
+    .chips{display:flex; flex-wrap:wrap; gap: 8px; margin-top: 10px}
+    .chip{
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.86);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 13px;
+    }
+    .cta{
+      margin-top: 14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+    }
+    .btn{
+      display:inline-flex;
+      gap: 8px;
+      align-items:center;
+      border-radius: 12px;
+      padding: 10px 12px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration:none;
+    }
+    .btn:hover{background: rgba(255,255,255,0.10); text-decoration:none}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(142,240,200,0.25), rgba(157,214,255,0.20));
+      border-color: rgba(158,230,255,0.30);
+    }
+    .hero-side{display:flex; flex-direction:column}
+    .profile{
+      padding: 18px;
+      display:flex;
+      gap: 14px;
+      align-items:center;
+    }
+    .avatar{
+      width: 74px; height: 74px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(157,214,255,0.25), rgba(142,240,200,0.20));
+      border: 1px solid rgba(255,255,255,0.12);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight: 800;
+      font-size: 22px;
+      color: rgba(255,255,255,0.90);
+      flex: 0 0 auto;
+    }
+    .meta{
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .meta strong{color: var(--text)}
+    .side-list{
+      padding: 0 18px 18px;
+      display:grid;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .row{display:flex; gap:10px; align-items:flex-start}
+    .row i{width: 18px; margin-top: 2px; color: rgba(255,255,255,0.70)}
+    section{margin-top: 18px}
+    .section-card{padding: 18px}
+    h2{
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: 0.2px;
+    }
+    .grid-2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 860px){
+      .grid-2{grid-template-columns:1fr}
+    }
+    .item{
+      padding: 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+    }
+    .item-title{font-weight: 700; margin-bottom: 4px}
+    .item-sub{color: var(--muted); font-size: 14px}
+    .pub{
+      display:grid;
+      gap: 10px;
+    }
+    .pub-entry{
+      padding: 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+    }
+    .pub-title{font-weight: 800; margin: 0 0 6px}
+    .pub-meta{color: var(--muted); font-size: 14px; margin: 0 0 8px}
+    .pub-links{display:flex; flex-wrap:wrap; gap: 10px; font-size: 14px}
+    .footer{
+      margin-top: 22px;
+      color: rgba(255,255,255,0.55);
+      font-size: 13px;
+      text-align:center;
+    }
+    .pill{
+      display:inline-block;
+      font-family: var(--mono);
+      font-size: 12px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.10);
+      color: rgba(255,255,255,0.75);
+      margin-right: 6px;
+    }
+  </style>
 </head>
-<body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=' first-line-indent'><table border="0">
-  <tr>
-    <td width="75%">
-      <h1>Xu Zhang</h1>
-        <li>Graduate</li>
-        <li><a href="http://ei.hust.edu.cn/">School of Electronic Information and Communications</a></li>
-        <li><a href="http://www.hust.edu.cn/">Huazhong University of Science and Technology</a></li>
-        <li>Luoyu Road 1037, Wuhan, China, 430074</li>
-        <li>Email: <a href="mailto:xuzhang480@gmail.com">xuzhang480@gmail.com</a></li>
-    </td>
-    <td width="25%">
-      <img src="photo.jpg" width="100%">
-    </td>
-  </tr>
-</table><p>&nbsp;</p><hr /><h2 id='education'><span>Education</span></h2><ul><li><p><span>M. Sc. in Electronic Information and Communications, Huazhong University of Science &amp; Technology, Wuhan, China</span></p></li><li><p><span>B. </span>&nbsp;<span>Sc. in Electronic Information and Communications, Huazhong University of Science &amp; Technology, Wuhan, China</span></p></li></ul><hr /><h2 id='publications'><span>Publications</span></h2><h3 id='conference-papers'><span>Conference Papers</span></h3><ol start='' ><li><p><span>Yong Xiao, </span><strong><span>Xu Zhang</span></strong><span>, Yingyu Li, Guangming Shi, and Tamer Başar, &quot;Rate-distortion Theory for Strategic Semantic Communication,&quot; IEEE Information Theory Workshop (ITW), Mumbai, India, November 2022.</span></p></li></ol><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div></div>
+
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>Xu Zhang</span>
+      </div>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#service">Service</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <div class="card hero-main" id="about">
+        <div class="kicker">PhD Student · Computer Engineering</div>
+        <h1>Xu Zhang</h1>
+        <p class="subtitle">
+          PhD student at <strong>Illinois Institute of Technology</strong>, Chicago. I work on robust machine learning and semantic communication, with interests in mixture of experts and reliability under distribution shift.
+        </p>
+
+        <div class="chips" aria-label="Research tags">
+          <span class="chip">Robust ML</span>
+          <span class="chip">Mixture of Experts</span>
+          <span class="chip">Semantic Communication</span>
+          <span class="chip">Wireless Systems</span>
+        </div>
+
+        <div class="cta" aria-label="Quick links">
+          <a class="btn primary" href="files/CV.pdf" target="_blank" rel="noopener">
+            <i class="fa fa-file-text-o" aria-hidden="true"></i> CV (PDF)
+          </a>
+          <a class="btn" href="https://scholar.google.com/citations?user=I29wRaAAAAAJ" target="_blank" rel="noopener">
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i> Google Scholar
+          </a>
+          <a class="btn" href="https://github.com/XuZhang480" target="_blank" rel="noopener">
+            <i class="fa fa-github" aria-hidden="true"></i> GitHub
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/xu-zhang-0180343b3/" target="_blank" rel="noopener">
+            <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+          <a class="btn" href="https://x.com/xuzhang480" target="_blank" rel="noopener">
+            <i class="fa fa-twitter" aria-hidden="true"></i> X
+          </a>
+          <a class="btn" href="mailto:xzhang156@hawk.illinoistech.edu">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i> Email
+          </a>
+        </div>
+      </div>
+
+      <aside class="card hero-side">
+        <div class="profile">
+          <!-- Replace the initials box with your photo if you want:
+               <img src="assets/photo.jpg" alt="Xu Zhang" style="width:74px;height:74px;border-radius:18px;object-fit:cover;border:1px solid rgba(255,255,255,0.12);" />
+          -->
+          <div class="avatar" aria-hidden="true">XZ</div>
+          <div class="meta">
+            <div><strong>Location:</strong> Chicago, IL 60616</div>
+            <div><strong>Email:</strong> xzhang156@hawk.illinoistech.edu</div>
+            <div><strong>Phone:</strong> +1 773 712 0543</div>
+          </div>
+        </div>
+
+        <div class="side-list">
+          <div class="row"><i class="fa fa-university" aria-hidden="true"></i><div>Illinois Institute of Technology, PhD (Aug 2024 to present)</div></div>
+          <div class="row"><i class="fa fa-flask" aria-hidden="true"></i><div>Research Assistant, IIT (Aug 2024 to present)</div></div>
+          <div class="row"><i class="fa fa-star" aria-hidden="true"></i><div>National Scholarship (Graduate, 2022) and (Undergraduate, 2019)</div></div>
+        </div>
+      </aside>
+    </div>
+
+    <section id="research" class="card section-card">
+      <h2>Research</h2>
+      <div class="grid-2">
+        <div class="item">
+          <div class="item-title">Robustness in Mixture of Experts</div>
+          <div class="item-sub">
+            Reliability, accuracy-robustness tradeoffs, and robust training strategies for MoE style architectures.
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-title">Strategic and Semantic Communication</div>
+          <div class="item-sub">
+            Semantics aware communication under constraints, including rate distortion perspectives and decision oriented objectives.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="card section-card">
+      <h2>Publications <span class="pill">Selected</span></h2>
+      <div class="pub">
+        <div class="pub-entry">
+          <div class="pub-title">Optimizing Robustness and Accuracy in Mixture of Experts: A Dual Model Approach</div>
+          <p class="pub-meta">
+            <strong>Zhang X</strong>, Xu K, Hu Z, et al. In <em>International Conference on Machine Learning (ICML)</em>.
+          </p>
+          <div class="pub-links">
+            <a href="https://openreview.net/forum?id=cngMks94dR" target="_blank" rel="noopener">
+              <i class="fa fa-external-link" aria-hidden="true"></i> OpenReview
+            </a>
+          </div>
+        </div>
+
+        <div class="pub-entry">
+          <div class="pub-title">Rate distortion theory for strategic semantic communication</div>
+          <p class="pub-meta">
+            Xiao Y, <strong>Zhang X</strong>, Li Y, et al. In <em>IEEE Information Theory Workshop (ITW)</em>, 2022.
+          </p>
+          <div class="pub-links">
+            <a href="https://ieeexplore.ieee.org/document/9965825" target="_blank" rel="noopener">
+              <i class="fa fa-external-link" aria-hidden="true"></i> IEEE Xplore
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <p style="color:var(--muted); margin-top:12px; font-size:14px;">
+        For the full list, see <a href="files/CV.pdf" target="_blank" rel="noopener">CV</a> or <a href="https://scholar.google.com/citations?user=I29wRaAAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
+      </p>
+    </section>
+
+    <section id="service" class="card section-card">
+      <h2>Academic Service</h2>
+      <div class="grid-2">
+        <div class="item">
+          <div class="item-title">Reviewer · ICML 2026</div>
+          <div class="item-sub">Peer reviewing for ICML 2026.</div>
+        </div>
+        <div class="item">
+          <div class="item-title">Reviewer · ICLR 2026 Workshop (GRaM)</div>
+          <div class="item-sub">Peer reviewing for GRaM Workshop at ICLR 2026.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards" class="card section-card">
+      <h2>Honors and Awards</h2>
+      <div class="grid-2">
+        <div class="item">
+          <div class="item-title">National Scholarship (Graduate)</div>
+          <div class="item-sub">Ministry of Education, China · 2022</div>
+        </div>
+        <div class="item">
+          <div class="item-title">National Scholarship (Undergraduate)</div>
+          <div class="item-sub">Ministry of Education, China · 2019</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="card section-card">
+      <h2>Contact</h2>
+      <div class="grid-2">
+        <div class="item">
+          <div class="item-title">Email</div>
+          <div class="item-sub">
+            <a href="mailto:xzhang156@hawk.illinoistech.edu">xzhang156@hawk.illinoistech.edu</a><br>
+            <span style="color:var(--muted); font-size:13px;">Alternative: <a href="mailto:xuzhang480@gmail.com">xuzhang480@gmail.com</a></span>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-title">Links</div>
+          <div class="item-sub">
+            <a href="https://xuzhang480.github.io/" target="_blank" rel="noopener">Homepage</a><br>
+            <a href="https://github.com/XuZhang480" target="_blank" rel="noopener">GitHub</a><br>
+            <a href="https://scholar.google.com/citations?user=I29wRaAAAAAJ" target="_blank" rel="noopener">Google Scholar</a><br>
+            <a href="https://www.linkedin.com/in/xu-zhang-0180343b3/" target="_blank" rel="noopener">LinkedIn</a><br>
+            <a href="https://x.com/xuzhang480" target="_blank" rel="noopener">X</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div>© <span id="y"></span> Xu Zhang. Built for GitHub Pages.</div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
