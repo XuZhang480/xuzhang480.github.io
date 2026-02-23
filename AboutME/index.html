@@ -3,11 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Xu Zhang | PhD Student</title>
-  <meta name="description" content="Xu Zhang — PhD student in Computer Engineering at Illinois Institute of Technology. Research in robust ML, mixture of experts, and semantic communication." />
+  <title>Xu Zhang</title>
+  <meta name="description" content="Xu Zhang — PhD student at Illinois Institute of Technology. Research in adversarial robustness and MLLM jailbreaks." />
   <meta name="author" content="Xu Zhang" />
 
-  <!-- Optional: Font Awesome (icons) -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -17,396 +16,212 @@
       --panel: rgba(255,255,255,0.06);
       --text: rgba(255,255,255,0.92);
       --muted: rgba(255,255,255,0.70);
-      --soft: rgba(255,255,255,0.14);
       --link: #9dd6ff;
       --accent: #8ef0c8;
       --shadow: 0 10px 30px rgba(0,0,0,0.35);
       --radius: 16px;
       --maxw: 1020px;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
       margin:0;
       font-family: var(--sans);
       color: var(--text);
       background:
-        radial-gradient(1000px 600px at 20% 10%, rgba(141, 217, 255, 0.25), transparent 60%),
-        radial-gradient(900px 500px at 80% 10%, rgba(142, 240, 200, 0.18), transparent 55%),
-        radial-gradient(900px 700px at 60% 90%, rgba(188, 152, 255, 0.16), transparent 60%),
+        radial-gradient(1000px 600px at 20% 10%, rgba(141, 217, 255, 0.22), transparent 60%),
+        radial-gradient(900px 500px at 80% 10%, rgba(142, 240, 200, 0.16), transparent 55%),
+        radial-gradient(900px 700px at 60% 90%, rgba(188, 152, 255, 0.14), transparent 60%),
         var(--bg);
-      line-height:1.6;
+      line-height:1.7;
     }
     a{color:var(--link); text-decoration:none}
-    a:hover{ text-decoration:underline }
-    .wrap{max-width:var(--maxw); margin:0 auto; padding: 22px 18px 64px;}
-    .nav{
-      position: sticky; top: 0;
-      z-index: 10;
-      backdrop-filter: blur(10px);
-      background: rgba(11,16,32,0.55);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .nav-inner{
-      max-width: var(--maxw);
-      margin:0 auto;
-      display:flex;
-      gap:14px;
-      align-items:center;
-      justify-content:space-between;
-      padding: 12px 18px;
-    }
-    .brand{
-      display:flex; gap:10px; align-items:center;
-      font-weight:700;
-      letter-spacing:0.2px;
-    }
-    .dot{
-      width:10px; height:10px; border-radius:50%;
-      background: linear-gradient(135deg, var(--accent), var(--link));
-      box-shadow: 0 0 0 4px rgba(158, 230, 255, 0.12);
-    }
-    .nav-links{
-      display:flex; flex-wrap:wrap;
-      gap: 10px 14px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-    .nav-links a{color:var(--muted)}
-    .nav-links a:hover{color:var(--text); text-decoration:none}
-    .hero{
-      margin-top: 22px;
-      display:grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 18px;
-      align-items: stretch;
-    }
-    @media (max-width: 860px){
-      .hero{grid-template-columns: 1fr}
-    }
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--maxw); margin:0 auto; padding: 26px 18px 64px;}
+
     .card{
       background: var(--panel);
       border: 1px solid rgba(255,255,255,0.10);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      overflow: hidden;
+      overflow:hidden;
     }
-    .hero-main{padding: 22px 22px 18px;}
-    .kicker{
-      font-family: var(--mono);
-      font-size: 12px;
-      color: rgba(255,255,255,0.70);
-      letter-spacing: 0.7px;
-      text-transform: uppercase;
+
+    /* About block */
+    .top{
+      padding: 22px;
+      display:grid;
+      grid-template-columns: 150px 1fr;
+      gap: 18px;
+      align-items: start; /* key: align photo top with text block */
     }
-    h1{margin: 10px 0 8px; font-size: 34px; line-height:1.15}
-    .subtitle{color: var(--muted); margin: 0 0 14px; font-size: 16px}
-    .chips{display:flex; flex-wrap:wrap; gap: 8px; margin-top: 10px}
-    .chip{
+    @media (max-width: 720px){
+      .top{grid-template-columns:1fr}
+    }
+    .photo{
+      width: 150px;
+      height: 150px;
+      border-radius: 18px;
+      overflow:hidden;
       border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.06);
-      color: rgba(255,255,255,0.86);
-      border-radius: 999px;
-      padding: 6px 10px;
-      font-size: 13px;
+      background: rgba(255,255,255,0.05);
+      margin-top: 100px; /* key: nudge photo down to align with paragraph start */
     }
-    .cta{
-      margin-top: 14px;
-      display:flex;
-      flex-wrap:wrap;
-      gap: 10px;
+    @media (max-width: 720px){
+      .photo{ margin-top: 0; }
     }
-    .btn{
+    .photo img{width:100%; height:100%; object-fit:cover; display:block}
+
+    .name{margin:0; font-size: 34px; line-height:1.15; letter-spacing:0.2px}
+    .kicker{margin-top: 6px; color: var(--muted); font-size: 15px}
+    .meta{
+      margin-top: 10px;
+      color: rgba(255,255,255,0.78);
+      font-size: 14px;
+    }
+    .meta span{display:inline-block; margin-right: 14px}
+    .meta i{margin-right: 6px; color: rgba(255,255,255,0.70)}
+    p{margin: 10px 0; color: rgba(255,255,255,0.86)}
+    .muted{color: var(--muted)}
+
+    section{margin-top: 16px}
+    .section{padding: 18px 22px}
+    h2{margin: 0 0 10px; font-size: 18px; letter-spacing:0.2px}
+    ul{margin: 10px 0 0 18px; color: rgba(255,255,255,0.86)}
+    li{margin: 6px 0}
+
+    /* Publication row with side-by-side figure */
+    .pub-row{
+      display:grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 14px;
+      align-items: start;
+    }
+    @media (max-width: 860px){
+      .pub-row{grid-template-columns:1fr}
+    }
+    .pub{
+      padding: 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+    }
+    .pub-title{font-weight:800; margin:0 0 6px; font-size: 16px}
+    .pub-meta{margin:0 0 10px; color: var(--muted); font-size: 14px}
+    .pub-link{
       display:inline-flex;
-      gap: 8px;
+      gap:8px;
       align-items:center;
       border-radius: 12px;
-      padding: 10px 12px;
+      padding: 8px 10px;
       border: 1px solid rgba(255,255,255,0.14);
       background: rgba(255,255,255,0.06);
       color: var(--text);
       font-weight: 600;
-      font-size: 14px;
+      font-size: 13px;
       text-decoration:none;
     }
-    .btn:hover{background: rgba(255,255,255,0.10); text-decoration:none}
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(142,240,200,0.25), rgba(157,214,255,0.20));
-      border-color: rgba(158,230,255,0.30);
-    }
-    .hero-side{display:flex; flex-direction:column}
-    .profile{
-      padding: 18px;
-      display:flex;
-      gap: 14px;
-      align-items:center;
-    }
-    .avatar{
-      width: 74px; height: 74px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, rgba(157,214,255,0.25), rgba(142,240,200,0.20));
-      border: 1px solid rgba(255,255,255,0.12);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight: 800;
-      font-size: 22px;
-      color: rgba(255,255,255,0.90);
-      flex: 0 0 auto;
-    }
-    .meta{
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .meta strong{color: var(--text)}
-    .side-list{
-      padding: 0 18px 18px;
-      display:grid;
-      gap: 8px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-    .row{display:flex; gap:10px; align-items:flex-start}
-    .row i{width: 18px; margin-top: 2px; color: rgba(255,255,255,0.70)}
-    section{margin-top: 18px}
-    .section-card{padding: 18px}
-    h2{
-      margin: 0 0 10px;
-      font-size: 18px;
-      letter-spacing: 0.2px;
-    }
-    .grid-2{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-    @media (max-width: 860px){
-      .grid-2{grid-template-columns:1fr}
-    }
-    .item{
-      padding: 14px;
+    .pub-link:hover{background: rgba(255,255,255,0.10); text-decoration:none}
+
+    .figure{
       border-radius: 14px;
+      overflow:hidden;
       border: 1px solid rgba(255,255,255,0.10);
-      background: rgba(255,255,255,0.05);
+      background: rgba(255,255,255,0.04);
     }
-    .item-title{font-weight: 700; margin-bottom: 4px}
-    .item-sub{color: var(--muted); font-size: 14px}
-    .pub{
-      display:grid;
-      gap: 10px;
+    .figure img{
+      width:100%;
+      display:block;
+      max-height: 280px;           /* keep it compact */
+      object-fit: contain;         /* avoid cropping */
+      background: rgba(0,0,0,0.10);
     }
-    .pub-entry{
-      padding: 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.10);
-      background: rgba(255,255,255,0.05);
-    }
-    .pub-title{font-weight: 800; margin: 0 0 6px}
-    .pub-meta{color: var(--muted); font-size: 14px; margin: 0 0 8px}
-    .pub-links{display:flex; flex-wrap:wrap; gap: 10px; font-size: 14px}
+
     .footer{
-      margin-top: 22px;
+      margin-top: 18px;
       color: rgba(255,255,255,0.55);
       font-size: 13px;
       text-align:center;
-    }
-    .pill{
-      display:inline-block;
-      font-family: var(--mono);
-      font-size: 12px;
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.10);
-      color: rgba(255,255,255,0.75);
-      margin-right: 6px;
     }
   </style>
 </head>
 
 <body>
-  <header class="nav">
-    <div class="nav-inner">
-      <div class="brand">
-        <span class="dot"></span>
-        <span>Xu Zhang</span>
-      </div>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#service">Service</a>
-        <a href="#awards">Awards</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
   <main class="wrap">
-    <div class="hero">
-      <div class="card hero-main" id="about">
-        <div class="kicker">PhD Student · Computer Engineering</div>
-        <h1>Xu Zhang</h1>
-        <p class="subtitle">
-          PhD student at <strong>Illinois Institute of Technology</strong>, Chicago. I work on robust machine learning and semantic communication, with interests in mixture of experts and reliability under distribution shift.
+    <!-- About -->
+    <div class="card top" id="about">
+      <div class="photo">
+        <img src="photo3.jpeg" alt="Xu Zhang photo">
+      </div>
+
+      <div>
+        <h1 class="name">Xu Zhang</h1>
+        <div class="kicker">
+          PhD Student, Computer Engineering · Illinois Institute of Technology (Chicago)
+        </div>
+
+        <div class="meta">
+          <span><i class="fa fa-map-marker" aria-hidden="true"></i>Chicago, IL</span>
+          <span><i class="fa fa-envelope-o" aria-hidden="true"></i>xzhang156@hawk.illinoistech.edu</span>
+        </div>
+
+        <p>
+          I am a PhD student at Illinois Institute of Technology. Previously, I received my M.S. degree in Information and Communication Engineering and my B.S. degree in Telecommunication Engineering from Huazhong University of Science and Technology (HUST), Wuhan, China. My current research focuses on adversarial robustness and multimodal large language model (MLLM) jailbreaks, with the goal of improving the reliability and security of modern learning systems.
         </p>
 
-        <div class="chips" aria-label="Research tags">
-          <span class="chip">Robust ML</span>
-          <span class="chip">Mixture of Experts</span>
-          <span class="chip">Semantic Communication</span>
-          <span class="chip">Wireless Systems</span>
-        </div>
-
-        <div class="cta" aria-label="Quick links">
-          <a class="btn primary" href="files/CV.pdf" target="_blank" rel="noopener">
-            <i class="fa fa-file-text-o" aria-hidden="true"></i> CV (PDF)
-          </a>
-          <a class="btn" href="https://scholar.google.com/citations?user=I29wRaAAAAAJ" target="_blank" rel="noopener">
-            <i class="fa fa-graduation-cap" aria-hidden="true"></i> Google Scholar
-          </a>
-          <a class="btn" href="https://github.com/XuZhang480" target="_blank" rel="noopener">
-            <i class="fa fa-github" aria-hidden="true"></i> GitHub
-          </a>
-          <a class="btn" href="https://www.linkedin.com/in/xu-zhang-0180343b3/" target="_blank" rel="noopener">
-            <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
-          </a>
-          <a class="btn" href="https://x.com/xuzhang480" target="_blank" rel="noopener">
-            <i class="fa fa-twitter" aria-hidden="true"></i> X
-          </a>
-          <a class="btn" href="mailto:xzhang156@hawk.illinoistech.edu">
-            <i class="fa fa-envelope-o" aria-hidden="true"></i> Email
-          </a>
-        </div>
+        <p class="muted">
+          More details are available in my <a href="../files/CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>.
+        </p>
       </div>
-
-      <aside class="card hero-side">
-        <div class="profile">
-          <!-- Replace the initials box with your photo if you want:
-               <img src="assets/photo.jpg" alt="Xu Zhang" style="width:74px;height:74px;border-radius:18px;object-fit:cover;border:1px solid rgba(255,255,255,0.12);" />
-          -->
-          <div class="avatar" aria-hidden="true">XZ</div>
-          <div class="meta">
-            <div><strong>Location:</strong> Chicago, IL 60616</div>
-            <div><strong>Email:</strong> xzhang156@hawk.illinoistech.edu</div>
-            <div><strong>Phone:</strong> +1 773 712 0543</div>
-          </div>
-        </div>
-
-        <div class="side-list">
-          <div class="row"><i class="fa fa-university" aria-hidden="true"></i><div>Illinois Institute of Technology, PhD (Aug 2024 to present)</div></div>
-          <div class="row"><i class="fa fa-flask" aria-hidden="true"></i><div>Research Assistant, IIT (Aug 2024 to present)</div></div>
-          <div class="row"><i class="fa fa-star" aria-hidden="true"></i><div>National Scholarship (Graduate, 2022) and (Undergraduate, 2019)</div></div>
-        </div>
-      </aside>
     </div>
 
-    <section id="research" class="card section-card">
-      <h2>Research</h2>
-      <div class="grid-2">
-        <div class="item">
-          <div class="item-title">Robustness in Mixture of Experts</div>
-          <div class="item-sub">
-            Reliability, accuracy-robustness tradeoffs, and robust training strategies for MoE style architectures.
-          </div>
-        </div>
-        <div class="item">
-          <div class="item-title">Strategic and Semantic Communication</div>
-          <div class="item-sub">
-            Semantics aware communication under constraints, including rate distortion perspectives and decision oriented objectives.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="publications" class="card section-card">
-      <h2>Publications <span class="pill">Selected</span></h2>
-      <div class="pub">
-        <div class="pub-entry">
-          <div class="pub-title">Optimizing Robustness and Accuracy in Mixture of Experts: A Dual Model Approach</div>
-          <p class="pub-meta">
-            <strong>Zhang X</strong>, Xu K, Hu Z, et al. In <em>International Conference on Machine Learning (ICML)</em>.
-          </p>
-          <div class="pub-links">
-            <a href="https://openreview.net/forum?id=cngMks94dR" target="_blank" rel="noopener">
-              <i class="fa fa-external-link" aria-hidden="true"></i> OpenReview
-            </a>
-          </div>
-        </div>
-
-        <div class="pub-entry">
-          <div class="pub-title">Rate distortion theory for strategic semantic communication</div>
-          <p class="pub-meta">
-            Xiao Y, <strong>Zhang X</strong>, Li Y, et al. In <em>IEEE Information Theory Workshop (ITW)</em>, 2022.
-          </p>
-          <div class="pub-links">
-            <a href="https://ieeexplore.ieee.org/document/9965825" target="_blank" rel="noopener">
-              <i class="fa fa-external-link" aria-hidden="true"></i> IEEE Xplore
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <p style="color:var(--muted); margin-top:12px; font-size:14px;">
-        For the full list, see <a href="files/CV.pdf" target="_blank" rel="noopener">CV</a> or <a href="https://scholar.google.com/citations?user=I29wRaAAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
+    <!-- Research -->
+    <section class="card section" id="research">
+      <h2>Research Interests</h2>
+      <p>
+        My research centers on two closely related themes:
+      </p>
+      <ul>
+        <li>
+          <strong>Adversarial Robustness:</strong> understanding failure modes under worst-case perturbations, and designing training objectives and architectures that improve robustness without overly compromising standard performance.
+        </li>
+        <li>
+          <strong>MLLM Jailbreaks:</strong> analyzing why multimodal models exhibit jailbreak vulnerabilities (e.g., objective conflicts and representation gaps), and developing practical mitigation strategies that better align safety and utility.
+        </li>
+      </ul>
+      <p class="muted">
+        More broadly, I aim to build learning systems whose behavior remains dependable under adversarial pressure and shifting objectives, and to develop mechanisms that make safety alignment more stable in real-world deployment.
       </p>
     </section>
 
-    <section id="service" class="card section-card">
-      <h2>Academic Service</h2>
-      <div class="grid-2">
-        <div class="item">
-          <div class="item-title">Reviewer · ICML 2026</div>
-          <div class="item-sub">Peer reviewing for ICML 2026.</div>
-        </div>
-        <div class="item">
-          <div class="item-title">Reviewer · ICLR 2026 Workshop (GRaM)</div>
-          <div class="item-sub">Peer reviewing for GRaM Workshop at ICLR 2026.</div>
-        </div>
-      </div>
-    </section>
+    <!-- Publication -->
+    <section class="card section" id="publications">
+      <h2>Selected Publication</h2>
 
-    <section id="awards" class="card section-card">
-      <h2>Honors and Awards</h2>
-      <div class="grid-2">
-        <div class="item">
-          <div class="item-title">National Scholarship (Graduate)</div>
-          <div class="item-sub">Ministry of Education, China · 2022</div>
-        </div>
-        <div class="item">
-          <div class="item-title">National Scholarship (Undergraduate)</div>
-          <div class="item-sub">Ministry of Education, China · 2019</div>
-        </div>
-      </div>
-    </section>
+      <div class="pub-row">
+        <div class="pub">
+          <div class="pub-title">Optimizing Robustness and Accuracy in Mixture of Experts: A Dual-Model Approach</div>
+          <div class="pub-meta">
+            <strong>Zhang X</strong>, Xu K, Hu Z, et al. · ICML 2025
+          </div>
 
-    <section id="contact" class="card section-card">
-      <h2>Contact</h2>
-      <div class="grid-2">
-        <div class="item">
-          <div class="item-title">Email</div>
-          <div class="item-sub">
-            <a href="mailto:xzhang156@hawk.illinoistech.edu">xzhang156@hawk.illinoistech.edu</a><br>
-            <span style="color:var(--muted); font-size:13px;">Alternative: <a href="mailto:xuzhang480@gmail.com">xuzhang480@gmail.com</a></span>
-          </div>
+          <p class="muted" style="margin-top:0;">
+            This work studies the robustness–accuracy tradeoff in mixture-of-experts models and proposes a dual-model approach to improve robustness while preserving strong standard performance.
+          </p>
+
+          <a class="pub-link" href="https://openreview.net/forum?id=cngMks94dR" target="_blank" rel="noopener">
+            <i class="fa fa-external-link" aria-hidden="true"></i> Paper (OpenReview)
+          </a>
         </div>
-        <div class="item">
-          <div class="item-title">Links</div>
-          <div class="item-sub">
-            <a href="https://xuzhang480.github.io/" target="_blank" rel="noopener">Homepage</a><br>
-            <a href="https://github.com/XuZhang480" target="_blank" rel="noopener">GitHub</a><br>
-            <a href="https://scholar.google.com/citations?user=I29wRaAAAAAJ" target="_blank" rel="noopener">Google Scholar</a><br>
-            <a href="https://www.linkedin.com/in/xu-zhang-0180343b3/" target="_blank" rel="noopener">LinkedIn</a><br>
-            <a href="https://x.com/xuzhang480" target="_blank" rel="noopener">X</a>
-          </div>
+
+        <div class="figure">
+          <img src="OverviewFigure/RobustMoE_ICML2025.png" alt="Overview figure for RobustMoE (ICML 2025)">
         </div>
       </div>
     </section>
 
     <div class="footer">
-      <div>© <span id="y"></span> Xu Zhang. Built for GitHub Pages.</div>
+      © <span id="y"></span> Xu Zhang
     </div>
   </main>
 
